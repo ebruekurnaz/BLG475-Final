@@ -21,9 +21,6 @@ public class LoginPage extends AbstractPage
     @FindBy(id = "verifyOtpButton")
     public WebElement verifyOTPButton;
 
-    @FindBy(id = "phoneNumberToVerify-error")
-    public WebElement otpCodeError;
-
     @FindBy(id = "login-tab")
     public WebElement loginModal;
 }

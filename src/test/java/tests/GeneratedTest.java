@@ -57,7 +57,6 @@ public class GeneratedTest extends AbstractTest
         browser.waitAndSendKeys(productPage.productNoteBar, "Example Note");
         browser.waitAndClick(productPage.noteSubmitButton);
 
-
         browser.waitAndClick(categoryPage.addBasket);
 
         LoginPage loginPage = new LoginPage(browser);
@@ -73,13 +72,12 @@ public class GeneratedTest extends AbstractTest
         loginPage.loginButton.click();
 
         loginPage.verifyOTPButton.click();
-        Assert.assertFalse(loginPage.otpCodeError.isDisplayed());
 
         if(productPage.closeButton.isDisplayed())
             browser.waitAndClick(productPage.closeButton);
 
+        browser.waitAndClick(productPage.addToBasketButton);
         browser.waitAndClick(productPage.piecesCheckbox);
-        browser.waitAndClick(categoryPage.addBasket);
         browser.waitAndClick(productPage.productPlusButton);
 
         browser.waitAndClick(mainPage.shoppingBasketButton);
@@ -95,11 +93,10 @@ public class GeneratedTest extends AbstractTest
         browser.waitAndClick(productPage.selectDeliveryAddress);
         browser.waitAndClick(productPage.selectedAddress);
         browser.waitAndSendKeys(productPage.orderNoteInput, "Example Order Note");
-        browser.waitAndClick(productPage.confirmButton);
+        browser.waitAndClick(productPage.nextButton);
 
-        // select time
-        browser.waitAndClick(productPage.confirmButton);
+        browser.waitAndClick(productPage.nextButton);
         browser.waitAndClick(productPage.garantiPaymentMethod);
-        Assert.assertTrue(productPage.confirmButton.isDisplayed());
+        Assert.assertTrue(productPage.nextButton.isDisplayed());
     }
 }
