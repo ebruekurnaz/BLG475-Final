@@ -72,9 +72,19 @@ public class GeneratedTest extends AbstractTest
         loginPage.loginButton.click();
 
         loginPage.verifyOTPButton.click();
+        try {
+            if(productPage.closeButton.isDisplayed())
+                browser.waitAndClick(productPage.closeButton);
 
-        if(productPage.closeButton.isDisplayed())
-            browser.waitAndClick(productPage.closeButton);
+        }catch (NoSuchElementException e){
+
+        }
+        try {
+            if (productPage.wisCloseButton.isDisplayed())
+                browser.waitAndClick(productPage.wisCloseButton);
+        }catch (NoSuchElementException e){
+
+        }
 
         browser.waitAndClick(productPage.addToBasketButton);
         browser.waitAndClick(productPage.piecesCheckbox);

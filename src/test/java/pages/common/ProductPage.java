@@ -28,6 +28,9 @@ public class ProductPage extends AbstractPage
     @FindBy(className = "close")
     public WebElement closeButton;
 
+    @FindBy(className = "wis-close")
+    public WebElement wisCloseButton;
+
     @FindBy(className = "campaign-modal-dismiss-button")
     public WebElement closeCampaignButton;
 
